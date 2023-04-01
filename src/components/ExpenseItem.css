@@ -1,0 +1,29 @@
+.expense-item {
+    display: flex;
+    background-color: #36529a;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px 200px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all ease 0.3s;
+}
+.expense-item:hover{
+    transform: scale(1.2);
+}
+
+.expense-item__description {
+    width: 78%;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-item__price {
+    border: 1px solid white;
+    background-color: blue;
+    padding: 5px 20px;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px black;
+}

@@ -1,0 +1,27 @@
+.expense-item__date {
+    font-weight: 600;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    border: 1px solid white;
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+    box-shadow: 5px 5px 5px white;
+}
+
+.date {
+font-size: 30px;
+}
+
+.month {
+font-size: 15px;
+}
+
+.year {
+font-size: 10px;
+margin-bottom: 10px;
+}
