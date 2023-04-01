@@ -1,0 +1,45 @@
+.new-expense__controls, col{
+    display: flex;
+    justify-content: center;
+    gap:10%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.new-expense__control {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.new-expense__control input {
+    height: 30px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+}
+
+.new-expense__control label {
+   color: white;
+   font-weight: 600;
+   margin-bottom: 5px;
+}
+
+.new-expense__submit {
+    display: flex;
+    justify-content: center;
+}
+
+.new-expense__submit button{
+    padding: 10px 30px;
+    background-color: brown;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
+    transition: all ease 0.3s;
+}
+.new-expense__submit button:hover {
+    transform: scale(1.2);
+}
+
