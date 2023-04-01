@@ -1,24 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ExpenseForm.css";
 const ExpenseForm = () => {
 
+const [enterTitle, setEnterTitle] = useState('');
+const [enterAmount, setEnterAmount] = useState('');
+const [enterLocation, setEnterLocation] = useState('');
+const [enterDate, setEnterDate] = useState('');
+
 const titleChangeHandler = (e) => {
- console.log(e.target.value);
+    setEnterTitle(e.target.value);
 }
 
 const amountChangeHandler = (e) => {
-    console.log(e.target.value);
+    setEnterAmount(e.target.value);
 }
 
 const locationChangeHandler = (e) => {
-    console.log(e.target.value);
+    setEnterLocation(e.target.value);
 }
 
 const dateChangeHandler = (e) => {
-    console.log(e.target.value);
+    setEnterDate(e.target.value);
 }
+
+const submitHandler = (e) => {
+    e.preventDefault();
+    const newExpenseData = {
+        id: (Math.random()*999999999).toString() ,
+        date: new Date(enterDate),
+        title: enterTitle,
+        location: enterLocation,
+        amount: enterAmount,
+    }
+    console.log(newExpenseData)
+}
+
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="col">
           <div className="new-expense__control">
