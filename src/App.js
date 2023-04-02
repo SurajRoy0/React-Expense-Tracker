@@ -1,7 +1,7 @@
+import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-function App() {
 const expenses  = [
   {
     id: 'e1',
@@ -33,13 +33,19 @@ const expenses  = [
   },
 ];
 
+function App() {
 
+  const [expenseData, setExpenseData] = useState(expenses)
+
+const addNewExpenseDataHandler = (newExpenseData) => {
+  setExpenseData([...expenseData,newExpenseData]);
+};
 
   return (
     <div>
       <h1>Expense Tracker</h1>
-      <NewExpense />
-      <Expenses item = { expenses }/>
+      <NewExpense onAddNewExpenseData = { addNewExpenseDataHandler }/>
+      <Expenses item = { expenseData }/>
     </div>
   );
 }

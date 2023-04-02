@@ -3,6 +3,7 @@ import "./Expenses.css"
 import ExpenseItems from './ExpenseItems'
 
 const Expenses = (props) => {
+  console.log(props)
      const { item } = props;
   return (
     <div>
