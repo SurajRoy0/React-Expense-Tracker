@@ -1,3 +1,19 @@
+.close-form {
+    position: absolute;
+    right: 230px;
+    top: 110px;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight:600 ;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.close-form:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
 .new-expense__controls, col{
     display: flex;
     justify-content: center;
@@ -5,7 +21,6 @@
     padding-bottom: 40px;
     padding-top: 40px;
 }
-
 .new-expense__control {
     display: flex;
     flex-direction: column;
@@ -28,10 +43,12 @@
 .new-expense__submit {
     display: flex;
     justify-content: center;
+    gap: 40px;
 }
 
 .new-expense__submit button{
-    padding: 10px 30px;
+    height: 35px;
+    width: 150px;
     background-color: brown;
     color: white;
     margin-bottom: 30px;

@@ -41,9 +41,13 @@ const submitHandler = (e) => {
     setEnterDate('');
 }
 
+const expenseFormPopUpHandler = () => {
+  props.formPopUp(false)
+}
 
   return (
     <form onSubmit={submitHandler}>
+      <span className="close-form" onClick={expenseFormPopUpHandler}>X</span>
       <div className="new-expense__controls">
         <div className="col">
           <div className="new-expense__control">

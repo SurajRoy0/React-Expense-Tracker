@@ -1,0 +1,20 @@
+.add-new-expense__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-new-expense__action {
+    padding: 15px 45px;
+    background-color: brown;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
+    transition: all ease 0.3s;
+    margin: 35px auto;
+}
+
+.add-new-expense__action:hover {
+    transform: scale(1.2);
+}
