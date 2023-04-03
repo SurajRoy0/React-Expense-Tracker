@@ -38,7 +38,9 @@ function App() {
   const [expenseData, setExpenseData] = useState(expenses)
 
 const addNewExpenseDataHandler = (newExpenseData) => {
-  setExpenseData([...expenseData,newExpenseData]);
+  setExpenseData( oldExpense => {
+    console.log(oldExpense)
+    return [newExpenseData,...expenseData] });
 };
 
   return (

@@ -1,0 +1,29 @@
+.filter-div {
+    margin: 25px 200px;
+    background-color: blueviolet;
+    padding: 30px 0;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.filter-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-date label {
+        color: white ;
+        font-size: 16px;
+}
+
+.filter-date input {
+    height: 25px;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
+}
+
