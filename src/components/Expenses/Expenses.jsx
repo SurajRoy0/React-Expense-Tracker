@@ -23,23 +23,37 @@ const Expenses = (props) => {
         (!endDate || expenseDate <= new Date(endDate))
       );
     });
+
+    let noContent = <h3 className='alert-msg'>No Expenses Found</h3>
+    let oneContent = <h3 className='alert-msg'>Only single Expense Here. Please Add More . . .</h3>
+    let expenseContent = filteredExpenses.map(item => {
+                                    return(
+                                              <ExpenseItems
+                                              key = {item.id}
+                                              date = { item.date }
+                                              title = { item.title }
+                                              location = { item.location }
+                                              amount = { item.amount }
+                                              />
+                                          )})
+    if(filteredExpenses.length == 1) {
+      noContent = <>
+                {oneContent}
+                {expenseContent}
+      
+      </>
+    }
+    else if (filteredExpenses.length >=1){
+      noContent = expenseContent
+    }
+
+
  
   return (
 
     <div>
       <ExpenseFilter takingStartDate = {filterStartDate} takingEndDate = {filterEndDate}  />
-      {
-        filteredExpenses.map(item => {
-          return(
-            <ExpenseItems
-            key = {item.id}
-            date = { item.date }
-            title = { item.title }
-            location = { item.location }
-            amount = { item.amount }
-            />
-          )})
-        }       
+      { noContent }       
     </div>
   )
 }
