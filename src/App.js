@@ -45,7 +45,7 @@ const addNewExpenseDataHandler = (newExpenseData) => {
 
   return (
     <div>
-      <h1>Expense Tracker</h1>
+      <h1 style={{color:'#36529a',textAlign:"center"}}>Expense Tracker</h1>
       <NewExpense onAddNewExpenseData = { addNewExpenseDataHandler }/>
       <Expenses item = { expenseData }/>
     </div>

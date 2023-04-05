@@ -8,37 +8,59 @@ const [enterLocation, setEnterLocation] = useState('');
 const [enterDate, setEnterDate] = useState('');
 
 const titleChangeHandler = (e) => {
-    setEnterTitle(e.target.value);
-}
+ 
+      setEnterTitle(e.target.value);
+   
+  }
 
 const amountChangeHandler = (e) => {
+ 
     setEnterAmount(e.target.value);
+  
 }
 
 const locationChangeHandler = (e) => {
+  
     setEnterLocation(e.target.value);
+  
 }
 
 const dateChangeHandler = (e) => {
+
     setEnterDate(e.target.value);
+  
 }
 
 const submitHandler = (e) => {
     e.preventDefault();
-    const newExpenseData = {
-        id: (Math.random()*999999999).toString() ,
-        date: new Date(enterDate),
-        title: enterTitle,
-        location: enterLocation,
-        amount: enterAmount,
-    }   
-    
-    props.onSaveExpenseData(newExpenseData)
+   if(
+    enterDate === '' ||
+    enterTitle === '' ||
+    enterLocation ==='' ||
+    enterAmount ===''
+   ){
+      alert("Please Fill All Credentials")
+   }
+   
+   else{
 
-    setEnterTitle('');
-    setEnterAmount('');
-    setEnterLocation('');
-    setEnterDate('');
+        const newExpenseData = {
+          id: (Math.random()*999999999).toString() ,
+          date: new Date(enterDate),
+          title: enterTitle,
+          location: enterLocation,
+          amount: enterAmount,
+      }
+
+      props.onSaveExpenseData(newExpenseData)
+
+      setEnterTitle('');
+      setEnterAmount('');
+      setEnterLocation('');
+      setEnterDate('');
+   }
+         
+   
 }
 
 const expenseFormPopUpHandler = () => {
